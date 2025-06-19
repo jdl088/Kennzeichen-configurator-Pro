@@ -2,7 +2,7 @@
 
 Ein schlanker Web‑Konfigurator für deutsche Kfz‑Kennzeichen – jetzt mit **Autocomplete**, Zufalls‑Gags und jeder Menge Komfort. Perfekt zum Lachen, Teilen … oder als kleines Front‑End‑Showcase 😄
 
-> **Live‑Demo:** [https://jdl088.github.io/Kennzeichen-configurator](https://jdl088.github.io/Kennzeichen-configurator-pro)
+> **Live‑Demo:** [https://jdl088.github.io/Kennzeichen-configurator-pro](https://jdl088.github.io/Kennzeichen-configurator-pro)
 
 ---
 
