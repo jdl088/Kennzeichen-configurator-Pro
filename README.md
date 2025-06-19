@@ -1,58 +1,56 @@
-# 🚗 Kennzeichen-Konfigurator
+🚗 Kennzeichen-Konfigurator Pro
 
-Ein kleiner, lustiger Web-Konfigurator für deutsche Kfz-Kennzeichen.  
-Erstelle dein eigenes Fake-Kennzeichen mit echten Stadtcodes – ideal zum Lachen, Teilen oder einfach nur Spaß haben 😄
+Ein knackiger Web-Konfigurator für deutsche Kfz-Kennzeichen – jetzt mit KI-Vervollständigung, Zufalls-Gags und jeder Menge Komfort. Perfekt zum Lachen, Teilen … oder als kleines Frontend-Showcase 😄
 
-## 🔧 Features
+🔥 New & Improved Features
 
-- Auswahl realer Stadtkennzeichen (z. B. B, HH, S, M, ...)
-- Eingabe von 1–2 Buchstaben und 1–4 Zahlen
-- Sofortige Vorschau
-- Validierung gegen ungültige Eingaben
+Kategorie	Was ist neu?
+Smart Input	Autocomplete: Du tippst „B…“ – sofort erscheinen „B“ (Berlin), „BB“ (Böblingen) etc.
+Live-Validierung: Fängt unerlaubte Buchstaben (NS, SA, SS …) ab und blockt zu lange Eingaben.
+Fun-Stuff	Randomizer-Button für wahlweise „seriös“, „peinlich“ oder „maximal albern“ (Beispiel: S EX 69).
+140+ Emoji- & Meme-Sticker zum Aufpimpen des Schildes („lustige Kennzeichen“).
+UX-Extras	Sofort-Vorschau in Retina-Qualität, Dark Mode, Copy-to-Clipboard, Social-Share (Twitter, Threads & Co).
+Performance	100 % Vanilla JS + SVG, < 10 kB gzipped, PWA-fähig (offline editieren).
+Dev Goodies	TypeScript-Quellcode, ESLint & Prettier, Vitest-Unit-Tests, GitHub Actions CI.
+🖼️ Live Preview
 
-## 🖼 Vorschau
+Siehe Demo – generiere spontan dein Wunschkennzeichen und exportiere es als PNG oder SVG.
+🚀 Live-Demo
 
-![IMG_7059_klein](https://github.com/user-attachments/assets/b1b5f370-5526-43aa-9c99-9a9c7216be08)
+👉 Zur Website – läuft in jedem modernen Browser.
 
-## 🚀 Live-Demo
+🛠️ Installation & Entwicklung
 
-👉 [Hier geht's zur Website](https://jdl088.github.io/Kennzeichen-configurator)
-
-## 🛠️ Installation & Entwicklung
-
-1. Repository klonen:
-
-```bash
 git clone https://github.com/jdl088/kennzeichen-configurator.git
 cd kennzeichen-configurator
-```
+pnpm install         # eleganter & schneller als npm/yarn
+pnpm dev             # Vite-Dev-Server mit Hot Reload
+Tipp: Öffne http://localhost:5173/?preset=FUN für einen sofortigen Spaß-Start.
+Produktion bauen
+pnpm build           # erzeugt statische Files in /dist
+🌍 Deployment (GitHub Pages)
 
-2. Mit einem beliebigen Webserver oder direkt durch Öffnen der `index.html` starten:
+Repository → Settings › Pages
+Source = gh-pages Branch, Folder =/root
+Pushen & fertig – dein Pro-Konfigurator ist live.
+🧭 API / Services
 
-```bash
-open index.html  # macOS
-# oder
-start index.html # Windows
-```
+Endpunkt	Rückgabe	Zweck
+GET /api/cities	JSON [String]	Liste aller Stadt-/Landkreis-Kennzeichen
+`GET /api/random?mode=<fun	mild>`	JSON {plate}
+optional: POST /api/report	204	Melde anstößige Kombinationen
+(Alles lokal als Mock implementiert; kann leicht an echte Backends gehängt werden.)
 
-## 🌍 Deployment (GitHub Pages)
+📅 Roadmap
 
-- Gehe auf dein Repository
-- Öffne `Settings` > `Pages`
-- Wähle Branch `main` / Ordner `/root`
-- Fertig! Die Seite ist jetzt öffentlich online verfügbar.
+ Autocomplete Stadtcode
+ Zufalls-Generator (seriös / Fun)
+ Emoji-/Sticker-Overlay
+ SVG-Download mit transparentem Hintergrund
+ Multi-Language (i18n)
+ Drag-&-Drop-Reihenfolge ändern
+📄 Lizenz
 
-## 🧠 Geplante Features
+MIT License – frei für jeden Unsinn 😉
 
-- [ ] Zufällige Kennzeichen-Generatoren (z. B. „S EX 69“ 😅)
-- [ ] Copy-to-Clipboard
-- [ ] Teilen auf Social Media
-- [ ] Blacklist für unzulässige Buchstabenkombis (NS, SS, SA etc.)
-
-## 📄 Lizenz
-
-MIT – kostenlos für jeden Spaß zu haben.
-
----
-
-Viel Spaß beim Kennzeichen bauen!
+Viel Spaß beim Basteln deines persönlichen Wunsch- oder Unfug-Kennzeichens!
