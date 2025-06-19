@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Kennzeichen Konfigurator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <h1>Kennzeichen Konfigurator</h1>
+    <form id="config-form">
+      <input type="text" id="stadtcode" maxlength="3" placeholder="z.B. B, M, AIC">
+      <input type="text" id="buchstaben" maxlength="2" placeholder="AB">
+      <input type="text" id="zahlen" maxlength="4" placeholder="1234">
+      <!-- Erstellbutton now create-btn -->
+      <button type="submit" id="create-btn">Erstellen</button>
+      <!-- Zufallsbutton now funny-btn -->
+      <button type="button" id="funny-btn">Zufallskennzeichen</button>
+    </form>
+    <img id="kennzeichen-img" src="" alt="Kennzeichen-Vorschau" style="margin-top:1rem; max-width: 100%;">
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
