@@ -1,56 +1,94 @@
-🚗 Kennzeichen-Konfigurator Pro
+# 🚗 Kennzeichen‑Konfigurator **Pro**
 
-Ein knackiger Web-Konfigurator für deutsche Kfz-Kennzeichen – jetzt mit KI-Vervollständigung, Zufalls-Gags und jeder Menge Komfort. Perfekt zum Lachen, Teilen … oder als kleines Frontend-Showcase 😄
+Ein schlanker Web‑Konfigurator für deutsche Kfz‑Kennzeichen – jetzt mit **Autocomplete**, Zufalls‑Gags und jeder Menge Komfort. Perfekt zum Lachen, Teilen … oder als kleines Front‑End‑Showcase 😄
 
-🔥 New & Improved Features
+> **Live‑Demo:** [https://jdl088.github.io/Kennzeichen-configurator](https://jdl088.github.io/Kennzeichen-configurator)
 
-Kategorie	Was ist neu?
-Smart Input	Autocomplete: Du tippst „B…“ – sofort erscheinen „B“ (Berlin), „BB“ (Böblingen) etc.
-Live-Validierung: Fängt unerlaubte Buchstaben (NS, SA, SS …) ab und blockt zu lange Eingaben.
-Fun-Stuff	Randomizer-Button für wahlweise „seriös“, „peinlich“ oder „maximal albern“ (Beispiel: S EX 69).
-140+ Emoji- & Meme-Sticker zum Aufpimpen des Schildes („lustige Kennzeichen“).
-UX-Extras	Sofort-Vorschau in Retina-Qualität, Dark Mode, Copy-to-Clipboard, Social-Share (Twitter, Threads & Co).
-Performance	100 % Vanilla JS + SVG, < 10 kB gzipped, PWA-fähig (offline editieren).
-Dev Goodies	TypeScript-Quellcode, ESLint & Prettier, Vitest-Unit-Tests, GitHub Actions CI.
-🖼️ Live Preview
+---
 
-Siehe Demo – generiere spontan dein Wunschkennzeichen und exportiere es als PNG oder SVG.
-🚀 Live-Demo
+## 🔥 Features
 
-👉 Zur Website – läuft in jedem modernen Browser.
+| Kategorie       | Highlights                                                                                                |
+| --------------- | --------------------------------------------------------------------------------------------------------- |
+| **Smart Input** | **Autocomplete** für Stadtkürzel (tippe „B…“ → „B“, „BB“, …); Livesyntax‑Check (blockt NS, SS, SA usw.).  |
+| **Fun‑Stuff**   | **Randomizer**‑Button (seriös / peinlich / maximal albern, z. B. `S EX 69`); 140 + Emoji‑ & Meme‑Sticker. |
+| **UX‑Extras**   | Retina‑Vorschau, Dark‑Mode, Copy‑to‑Clipboard, Social‑Share.                                              |
+| **Performance** | 100 % Vanilla JS + SVG, < 10 kB gzipped, **PWA‑fähig** (offline editieren).                               |
+| **Dev Goodies** | TypeScript‑Quellcode, ESLint + Prettier, Vitest‑Tests, GitHub Actions CI.                                 |
 
-🛠️ Installation & Entwicklung
+---
 
-git clone https://github.com/jdl088/kennzeichen-configurator.git
-cd kennzeichen-configurator
-pnpm install         # eleganter & schneller als npm/yarn
-pnpm dev             # Vite-Dev-Server mit Hot Reload
-Tipp: Öffne http://localhost:5173/?preset=FUN für einen sofortigen Spaß-Start.
-Produktion bauen
-pnpm build           # erzeugt statische Files in /dist
-🌍 Deployment (GitHub Pages)
+## 🖼️ Screenshots
 
-Repository → Settings › Pages
-Source = gh-pages Branch, Folder =/root
-Pushen & fertig – dein Pro-Konfigurator ist live.
-🧭 API / Services
+![Kennzeichen‑Konfigurator Pro Preview](https://raw.githubusercontent.com/your-repo/assets/preview_pro.png)
 
-Endpunkt	Rückgabe	Zweck
-GET /api/cities	JSON [String]	Liste aller Stadt-/Landkreis-Kennzeichen
-`GET /api/random?mode=<fun	mild>`	JSON {plate}
-optional: POST /api/report	204	Melde anstößige Kombinationen
-(Alles lokal als Mock implementiert; kann leicht an echte Backends gehängt werden.)
+---
 
-📅 Roadmap
+## 📦 Installation & Entwicklung
 
- Autocomplete Stadtcode
- Zufalls-Generator (seriös / Fun)
- Emoji-/Sticker-Overlay
- SVG-Download mit transparentem Hintergrund
- Multi-Language (i18n)
- Drag-&-Drop-Reihenfolge ändern
-📄 Lizenz
+```bash
+# Repo clonen
+pnpm create vite kennzeichen-configurator-pro --template vanilla-ts
+cd kennzeichen-configurator-pro
+pnpm install
 
-MIT License – frei für jeden Unsinn 😉
+# Dev‑Server mit Hot‑Reload starten
+pnpm dev
+# öffnet i. d. R. http://localhost:5173
+```
 
-Viel Spaß beim Basteln deines persönlichen Wunsch- oder Unfug-Kennzeichens!
+> **Tipp:** `http://localhost:5173/?preset=FUN` startet direkt mit Zufallskennzeichen.
+
+### Produktion bauen
+
+```bash
+pnpm build   # statische Dateien in ./dist
+```
+
+---
+
+## 🌍 Deployment auf GitHub Pages
+
+1. `pnpm run deploy` (skript legt Branch **gh‑pages** an)
+2. Repository → **Settings › Pages**
+3. Branch = **gh‑pages**, Ordner = `/`
+4. Speichern – dein Pro‑Konfigurator ist live.
+
+---
+
+## 🧭 API / Services
+
+| Endpoint                         | Returns             | Zweck                              |
+| -------------------------------- | ------------------- | ---------------------------------- |
+| `GET /api/cities`                | `string[]`          | Liste aller Stadt‑/Landkreis‑Codes |
+| `GET /api/random?mode=fun\|mild` | `{ plate: string }` | Zufallskennzeichen                 |
+| `POST /api/report`               | `204 No Content`    | Anstößige Kombination melden       |
+
+*(Lokal als Mock implementiert; lässt sich leicht an echte Back‑Ends koppeln.)*
+
+---
+
+## 📅 Roadmap
+
+* [x] Autocomplete Stadtcode
+* [x] Zufalls‑Generator (seriös / Fun)
+* [x] Emoji‑/Sticker‑Overlay
+* [ ] **SVG‑Download mit transparentem Hintergrund**
+* [ ] Mehrsprachigkeit (i18n)
+* [ ] Drag‑&‑Drop‑Reihenfolge ändern
+
+---
+
+## 🤝 Contributing
+
+Pull‑Requests sind willkommen! Bitte `pnpm lint` & `pnpm test` ausführen, bevor du committest.
+
+---
+
+## 📄 Lizenz
+
+[MIT](LICENSE) – frei für jeden Unsinn 😉
+
+---
+
+> Viel Spaß beim Basteln deines persönlichen Wunsch‑ oder Unfug‑Kennzeichens!
